@@ -1,0 +1,13 @@
+pip install pandas
+
+pip install numpy 
+
+pip install scikit-learn==0.23.1
+
+pip install flask
+
+pip install matplotlib
+
+**pip install packages
+
+python 3.8

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Yield Prediction</title>
+	<!-- Bootstrap core CSS -->
+	<link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="../static/css/all.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                   
+               <li class="nav-item">
+                     <a class="nav-link  " href="{{url_for('index')}}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                  </li>
+				  <li class="nav-item">
+                     <a class="nav-link " href="{{url_for('yield_prediction')}}">Yield Prediction</a>
+                  </li>
+				  <li class="nav-item">
+                     <a class="nav-link" href="{{url_for('crop_prediction')}}">Crop Recommendation</a>
+                  </li>
+				  <li class="nav-item">
+                     <a class="nav-link active" href="{{url_for('district')}}">District Wise </a>
+                  </li>
+				   <li class="nav-item">
+                     <a class="nav-link" href="{{url_for('homepage')}}">Weather Forecast </a>
+                  </li>
+				   <li class="nav-item">
+                     <a class="nav-link" href="{{url_for('homepage')}}">Weather Report </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{{url_for('chart')}}">chart</a>
+                 </li>
+               </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="slider-main">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+ 
+            <div class="carousel-inner" role="listbox">
+               <!-- Slide One - Set the background image for this slide in the line below -->
+               <div class="carousel-item active" style="background-image: url('../static/images/slider-10.jpg')">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Crop Recommender System Using Machine Learning Approach</h2>
+                  </div>
+               </div>
+               <!-- Slide Two - Set the background image for this slide in the line below -->
+              
+               <!-- Slide Three - Set the background image for this slide in the line below -->
+               
+            </div>
+             
+        </div>
+    </header>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="services-bar">
+            <center><h1 class="my-4">District-Wise Crop Yield Prediction </h1></center>
+            <!-- Services Section -->
+            <center>
+            <div>
+            <h6>Please make sure you have uploaded Dataset of Districts, if not then please 
+            <a href="{{url_for('upload')}}">upload</a> District Dataset
+            </h6>
+            </div>
+            </center>
+            <div class="row">
+                
+				  
+			           
+			      
+		     
+  <form class="form-horizontal"  action="{{ url_for('dis_pre')}}" method="POST">
+		 
+			 
+		</div>
+		 <div class="span5">
+			 <div class="control-group">
+
+			 	<center><label class="control-label" for="inputMessage"><b>Enter your Details</b></label></br></center>
+			 	</br>
+			 	
+			 	<center>
+			 		<div class="controls">
+
+
+
+			 			District Name:    <select type="text" name="District_Name" required="required" placeholder="Distrcit_Name">
+			 				<option value="0">ADILABAD</option>
+			 				<option value="1">BHADRADRI KOTHAGUDEM</option>
+			 				<option value="3">HANUMAKONDA</option>
+			 				<option value="4">HYDERABAD</option>
+			 				<option value="5">JAGTIAL</option>
+			 				<option value="6">JANGOAN</option>
+			 				<option value="7">JAYASHANKAR BHOOPALPALLY</option>
+			 				<option value="8">JOGULAMBA GADWAL</option>
+			 				<option value="9">KAMAREDDY</option>
+			 				<option value="10">KARIMNAGAR</option>
+			 				<option value="11">KHAMMAM</option>
+			 				<option value="12">KOMARAM BHEEM ASIFABAD</option>
+			 				<option value="13">MAHABUBABAD</option>
+			 				<option value="14">MAHABUBNAGAR</option>
+			 				<option value="15">MANCHERIAL</option>
+			 				<option value="16">MEDAK</option>
+			 				<option value="17">MEDCHAL-MALKAJGIRI</option>
+			 				<option value="18">MULUG</option>
+			 				<option value="19">NAGARKURNOOL</option>
+			 				<option value="20">NALGONDA</option>
+			 				<option value="21">NARAYANPET</option>
+			 				<option value="22">NIRMAL</option>
+			 				<option value="23">NIZAMABAD</option>
+			 				<option value="24">PEDDAPALLI</option>
+			 				<option value="25">RAJANNA SIRCILLA</option>
+			 				<option value="26">RANGAREDDY</option>
+			 				<option value="27">SANGAREDDY</option>
+			 				<option value="28">SIDDIPET</option>
+			 				<option value="29">SURYAPET</option>
+			 				<option value="30">VIKARABAD</option>
+			 				<option value="31">WANAPARTHY</option>
+			 				<option value="32">WARANGAL</option>
+			 				<option value="33">YADADRI BHUVANAGIRI</option>
+
+
+			 			</select>
+			 		</div>
+			 	</center>			 	
+				 <br />
+			 	<center>
+			 		<div class="controls">
+
+			 			Crop:    <select type="text" name="Crop" required="required" placeholder="Crop">
+			 				<option value="0">Arecanut</option>
+			 				<option value="1">Banana</option>
+			 				<option value="2">Dry chillies</option>
+			 				<option value="3">Coconut</option>
+			 				<option value="4">Cotton</option>
+			 				<option value="5">Dry ginger</option>
+			 				<option value="6">Groundnut</option>
+			 				<option value="7">Maize</option>
+			 				<option value="8">Moong(Green Gram)</option>
+			 				<option value="9">Onion</option>
+			 				<option value="10">Paddy</option>
+			 				<option value="11">Ragi</option>
+			 				<option value="12">Sugarcane</option>
+			 				<option value="13">Tobacco</option>
+			 				<option value="14">Turmeric</option>
+			 				<option value="15">Rice</option>
+
+			 			</select>
+			 		</div>
+			 	</center>
+			 	</br>
+
+
+			 	<center>  Area : <input type="text" name="Area" placeholder="Area in hectares" required="required" /></center>
+			 	</br>
+			 	<div class="controls">
+
+			 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 		soil_type:    <select type="text" name="soil_type" required="required" placeholder="soil_type">
+			 			<option value="0">Sandy</option>
+			 			<option value="1">Red</option>
+			 			<option value="2">Black</option>
+			 			<option value="3">Clayey</option>
+			 			<option value="4">Alluvial</option>
+			 			<option value="5">Loamy</option>
+			 			<option value="6">Latterite</option>
+
+
+			 		</select>
+			 	</div>
+
+
+			 	</br>
+			 	</br>
+
+			 	<center><input type="submit" class="btn btn-success" value="submit" style="margin-left: 10px"></center>
+
+			 </div>
+			</div>
+			 
+	</form> 
+        <br>
+        <br>
+		<center>
+		<div>		
+		<p>Production would be {{ prediction_text }} KGs</p>
+				<p>Yield would be {{ yield_predictions }} KGs/acre</p>		
+            
+            <!-- /.row -->
+        </div>
+        </center>
+        
+            
+        
+        </div>
+        <!-- Portfolio Section -->
+ 
+    
+        <!-- Get In Touch Now Section -->
+        
+    </div>
+	</div>
+	 </br>
+					 </br>
+					  </br>
+					 </br>
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+               
+               <div class="col-lg-3 col-md-6 col-sm-6 col">
+					<h5 class="headin5_amrc col_white_amrc pt2"></h5>
+					<!--headin5_amrc ends here-->
+					  <p> Project done by Ehsan,Aamir and Umaid for Major Project at Deccan College of Engineering and Technology</p>
+               
+					<!--footer_ul2_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<h5 class="headin5_amrc col_white_amrc pt2"></h5>
+					<!--headin5_amrc-->
+					 <p>It is a project for the sake of the glorious farmers of our nation
+					 so that they can take care of their own land and in turn be 
+					 less dependent on Government or a private orgranization that exploits them.</p>
+					<!--footer_ul_amrc ends here-->
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 ">
+					<h5 class="headin5_amrc col_white_amrc pt2"></h5>
+					<!--headin5_amrc-->
+					<ul class="footer_ul_amrc">
+						<li class="media">
+							 <p>Syed Umaid Ahmed - 160318737045 </p></br>
+							 
+							<div class="media-body">
+								<p></p>
+								<span></span>
+							</div>
+						</li>
+						<li class="media">
+							 <p>Ahmed Ehsanullah - 160318737053</p></br>
+							 
+							<div class="media-body">
+								<p></p>
+								<span></span>
+							</div>
+						</li>
+						<li class="media">
+							 <p>Mohammed Aamir Ali - 160318737054</p></br>
+							<div class="media-body">
+								<p><p>
+								<span></span>
+							</div>
+						</li>
+					</ul>
+					<!--footer_ul_amrc ends here-->
+					
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="footer-logo">
+				<a href="#"><img src="images/footer-logo.png" alt="" /></a>
+				 <p>“Cultivators are the most valuable citizens…they are tied to their country.” — Thomas Jefferson.</p>
+			</div>
+            <!--foote_bottom_ul_amrc ends here-->
+           
+            <!--social_footer_ul ends here-->
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
