@@ -27,9 +27,11 @@
                <li class="nav-item">
                      <a class="nav-link  " href="{{url_for('index')}}">Home</a>
                   </li>
+                  <!-- 
                   <li class="nav-item">
                      <a class="nav-link" href="{{url_for('login')}}">Login</a>
                   </li>
+                  -->
 				  <li class="nav-item">
                      <a class="nav-link " href="{{url_for('yield_prediction')}}">Yield Prediction</a>
                   </li>
@@ -204,8 +206,8 @@
         <br>
 		<center>
 		<div>		
-		<p>Production would be {{ prediction_text }} KGs</p>
-				<p>Yield would be {{ yield_predictions }} KGs/acre</p>		
+		<p>Production would be {{ prediction_text }} Tonnes</p>
+				<p>Yield would be {{ yield_predictions }} Tonnes/Hectare</p>		
             
             <!-- /.row -->
         </div>

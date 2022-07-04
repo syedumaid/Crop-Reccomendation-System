@@ -27,9 +27,11 @@
                <li class="nav-item">
                      <a class="nav-link  " href="{{url_for('index')}}">Home</a>
                   </li>
+                  <!-- 
                   <li class="nav-item">
                      <a class="nav-link" href="{{url_for('login')}}">Login</a>
                   </li>
+                  -->
                  
                  
                    
@@ -174,7 +176,7 @@
 			 	</br>
 
 
-			 	<center>  Area : <input type="text" name="Area" placeholder="Area in acres" required="required" /></center>
+			 	<center>  Area : <input type="text" name="Area" placeholder="Area in Sq.ft" required="required" /></center>
 			 	</br>
 			 	<div class="controls">
 
@@ -209,7 +211,7 @@
 		<center>
 		<div>		
 		<p>Production would be {{ prediction_text }} KGs</p>
-				<p>Yield would be {{ yield_predictions }} KGs/acre</p>		
+				<p>Yield would be {{ yield_predictions }} KGs/Sq.ft.</p>		
             
             <!-- /.row -->
         </div>
